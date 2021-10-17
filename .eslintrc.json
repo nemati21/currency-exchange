@@ -1,0 +1,36 @@
+{
+    "extends": ["airbnb/base", "plugin:security/recommended"],
+    "rules": {
+      "no-console": "off",
+      "max-len": "off",
+      "camelcase": "off",
+      "eol-last": "off",
+      "linebreak-style": "off",
+      "quotes": "error",
+      "no-multiple-empty-lines": "off",
+      "no-unused-vars": "error",
+      "no-else-return": "off",
+      "default-case":"off",
+      "no-await-in-loop":"off",
+      "object-curly-newline": [
+        "off",
+        {
+          "ObjectExpression": "always",
+          "ObjectPattern": { "multiline": true },
+          "ImportDeclaration": "never",
+          "ExportDeclaration": { "multiline": true, "minProperties": 4 }
+        }
+      ]
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": false
+      }
+    },
+    "env": {
+      "node": true
+    }
+  }
+  
