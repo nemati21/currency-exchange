@@ -14,6 +14,12 @@ const setError = (err, res) => {
       code: 1199,
       message: 'Invalid request',
     };
+  } else if (err.statusCode === 400) {
+    code = 400;
+    payload = {
+      code: 1199,
+      message: 'Invalid request',
+    };
   } else if (!err.code && err.error && err.error.code) {
     code = 406;
     payload = {

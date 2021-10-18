@@ -41,7 +41,7 @@ if (cluster.isWorker || config.env.toLowerCase() === 'development') {
       data = null;
     }
 
-    Object.assign(reply.res, {
+    Object.assign(reply.raw, {
       payload: data || undefined,
       input: {
         method: request.raw.method,
